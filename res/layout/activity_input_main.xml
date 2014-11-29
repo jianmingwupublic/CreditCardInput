@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <TextView
+            android:id="@+id/texttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/title_font_size"
+            android:text="@string/title" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <ImageView
+        	android:id="@+id/imageView1"
+       		android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:src="@drawable/cvv" />
+        <TextView
+            android:id="@+id/textcardnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/card_numbers" />
+     	<EditText
+                android:id="@+id/editcardnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="16"
+                android:inputType="number" >
+     	         	<requestFocus />
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+            <TextView
+            	android:id="@+id/textexpiration"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="@string/expiration" />
+			<Spinner
+    			android:id="@+id/mm_spinner"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content" />
+            <TextView
+            	android:id="@+id/textsplit"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="@string/split" />
+            <EditText
+                android:id="@+id/edityear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="4"
+                android:inputType="number" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/textccv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ccv_pin" />
+         <EditText
+                android:id="@+id/editccv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="3"
+                 android:maxEms="3"
+                android:inputType="number" >
+            </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    	<Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit" />
+        </LinearLayout>
+</LinearLayout>
